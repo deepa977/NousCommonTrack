@@ -1,0 +1,282 @@
+Oop 
+Object oriented programming
+
+object->
+material or any thing
+it has existance
+look and feel
+properties
+representing a category of a material
+
+laptop,
+table,
+pen
+marker
+board
+car
+house
+mobile 
+
+examples of object oriented programming languages
+smalltalk,C++, java, javascript, python, .net (C#.net, vb.net)
+
+Car -> end user / consumer perspective
+color
+mileage
+brand
+price
+capacity
+features
+type 
+enginetype 
+ 
+manufacturer
+safety
+raw materials 
+design
+features
+factory expenses
+worker expenses
+robotic maintanace
+profit margin
+list of shareholder
+cost of advertisement
+
+
+dealer / showroom person
+stock
+dealer margin
+prospective customer
+existing customer
+aftersales service
+workshop
+
+4 oops concepts
+Data Abstraction
+
+Info + extracting the necessary details
+
+Encapsulation
+
+both are in strip
+tablet                       
+medicine in solid form
+C -> tablet
+
+capsule
+medicine in powdered format which is put inside a cover
+c++, java -> capsule
+defining the properties, functions , constructor inside a class is called encapsulation
+
+encapsulation means data hiding inside a class
+
+we define the accessibility
+private - > accessible within the class
+public -> global access. even outside the class it is accessible
+protected -> it is accessible between parent/ child class (inherited member or family member)
+
+access specifier
+
+class is a blue print of an object
+blue print of a building -> building plan
+blue print of an object -> class
+
+Inheritance 
+advantage : reusability
+
+marutiCar (parent)
+  brandname
+  color
+  price
+  milage
+  speed
+  capacity
+
+Alto   WagonR    ECCO    Swift  Ertiga
+
+feature specific to ALTO
+
+ALTO 800  
+
+
+types of inheritance supported in OOPS concepts
+Single Inheritance -> one parent and one/more child classes
+
+
+Multiple Inheritance -> one or more parent class can be inherited in a  child class
+
+MultiLevel Inheritance -> a child class becomes parent for another class
+Parent
+|
+child
+| 
+sub child
+
+
+Hierarchial Inheritance
+is a combination of single / multilevel inheritance
+
+hybrid Inheritance
+is a combination of single/multiple/multilevel inheritance
+
+
+
+Polymorphism
+
+poly + morphism
+many forms of the same method is called polymorphism
+
+
+add()
+add(int x,int y)
+add(string fname, string lname)
+add(float w, float h)
+
+forms of parameters -> no of parameters
+                       type of parameters
+                       sequence or order of parameters
+
+polymorphism is of 2 types
+
+static polymorphism                   dynamic polymorphism
+method overloading                     method overriding
+
+add()
+add(int x,int y)
+add(string fname, string lname)
+add(float w, float h)
+                   
+constructor overloading
+it is used to initialize the property of a class
+it has same name of class and no return type
+constructor can be default constructor(no parameter) , parameterized constructor
+
+
+class Employee
+{
+  empno
+  name
+  dept
+  desg
+  salary  
+}
+Employee()
+{
+empno=11111;
+name="default";
+dept="Training";
+desg="Trainee";
+salary=23000;
+}
+Employee(int empno, string name,string dept, string desg, double salary){}
+
+operator overloading
+12+3.14
+
+45-30
+
+Employee A - Employee B
+
+if the operators has to operate on non numerical datatypes then operator overloading is used
+
+dynamic polymorphism -> method overriding
+parent class method is used in child class with a different functionality we call it as dynamic polymorphism
+
+
+class livingBeing
+{
+string food,water, air , shelter;
+
+void GetInput()
+{
+ take input of Food, water, air and shelter
+}
+
+}
+class Bird inheriting livingBeing
+{
+  string beak, feathers, wings;
+  void GetInput()
+   { 
+      take input of beak , feathers, wings 
+    }
+}
+
+
+Pizza ordering System
+has 2 types of customer
+registered customer
+guest customer
+ pizza is of veg and nonveg
+they come as Large , medium and small
+they can have different toppings
+they can choose qty for different combination
+payment can be done by card or COD
+pizza will be home delivered based on the order received from the nearest outlet based on the customer location
+
+
+      Customer -> id(mobile no/ email id)
+         |
+ Regular      Guest 
+    address   address 
+    nooforders pincode 
+    name       
+     pincode      
+
+  pizzadetails
+   pizzaid
+   pizzaname
+   toppings
+   type
+   size 
+   price
+
+
+   location
+    locationid
+    locationname
+     pincode   
+
+   outlet 
+   outletid
+   outletmanager
+   outletcontactnumber
+   pincode
+
+
+   order
+   orderid
+   emailid/mobile
+   pizzaid 
+   qty
+   outletid
+   totalamt
+   ordertracking
+
+payment
+ cardno
+ transaction amt
+  cardtype
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
