@@ -1,0 +1,203 @@
+The responsive college fest website in HTML is a simple and static web for managing the college programs and events. With the help of this website, you can easily forward your upcoming programs and encourage the participants. You can easily view the event type that is going to happen at any college. Here you can also send your registration details for participating in the event.
+The user can simply click on the menu bar and view its descriptions. You can simply implement these type of menu for a responsive website which makes easier for the user to view the college programs more efficiently.
+
+
+Semantic controls of Html 5
+
+1. header
+2. footer
+3. aside
+4. section
+5. article
+6. menus
+
+CSS -> cascading style sheets
+they apply look and feel for the html tags
+web application
+1. responsive, it should be attractive, contents, images should be placed properly
+2. same look and feel across all the pages
+
+CSS can be created in 3 ways
+1. external css -> it is a css file having an extension .css and it is referred inside the html page
+
+2. internal css ->it is a css content within the html file itself
+css is defined inside the <head> tag within <style> tag
+
+3. inline css-> css is defined within the html tag itself
+<b style="define the styles">
+an attribute called style is used inside the html tag
+
+css is of 2 types 
+css -> backward compatible with all the version
+css3 -> new standard for defining css styles
+box shadow, text shadow, animations, effects, multi column output
+
+css syntax is unique
+it is not in tag format
+
+body
+{
+background-color:red;
+font-size:12px;
+fontfamily:arial;
+}
+
+comments in html is <!--   comment text -->
+To refer a css file in html
+ <link rel="stylesheet" type="text/css" href="/CSS/style1.css">
+
+css comment -> /* comment text */
+
+we can create styles for html elements or generic style
+html element -> 
+h1{}-> this style will apply to h1 tag 
+
+generic style can be applied to any html element
+.anyname {
+ }
+#anyname
+{
+}
+
+to use in any html tags which has .
+<div class="anyname">
+
+<h2 class="anyname">
+
+<i class="anyname">
+to use in any html tags which has #
+<div id="anyname">
+
+<h2 id="anyname">
+
+<i id="anyname">
+
+padding:
+
+The padding property is a shorthand property for:
+
+ padding-top
+padding-right
+padding-bottom
+padding-left
+
+If the padding property has two values:
+
+padding:10px 5px;
+top and bottom padding are 10px
+right and left padding are 5px
+
+Default value:	0 means no extra spaces
+
+display:
+
+The display property specifies the display behavior (the type of rendering box) of an element.
+Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
+
+Block :takes up the full width available(stretches out to the left and right as far as it can).
+
+Inline:takes up as much width as necessary.
+
+Display: none;
+display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them.
+
+
+:hover
+
+Select and style a link when you mouse over it:
+
+a:hover {
+  background-color: yellow;
+}
+
+
+z-index:
+
+The z-index property specifies the stack order of an element.
+
+An element with greater stack order is always in front of an element with a lower stack order.
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) 
+
+position:
+The position Property
+The position property specifies the type of positioning method used for an element.
+
+There are five different position values:
+
+static
+relative
+fixed
+absolute
+sticky
+
+Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+
+position: static;
+HTML elements are positioned static by default.
+
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+
+position: relative;
+An element with position: relative; is positioned relative to its normal position.
+
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+
+position: fixed;
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+A fixed element does not leave a gap in the page where it would normally have been located.
+
+Notice the fixed element in the lower-right corner of the page.
+
+position: absolute;
+An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+Note: A "positioned" element is one whose position is anything except static.
+
+position: sticky;
+An element with position: sticky; is positioned based on the user's scroll position.
+
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+
+min-width:
+
+The min-width property defines the minimum width of an element.
+
+If the content is smaller than the minimum width, the minimum width will be applied.
+
+If the content is larger than the minimum width, the min-width property has no effect.
+
+Note: This prevents the value of the width property from becoming smaller than min-width.
+
+
+text-decoration:
+text-decoration-line	Sets the kind of text decoration to use (like underline, overline, line-through)
+text-decoration-color	Sets the color of the text decoration
+text-decoration-style	Sets the style of the text decoration (like solid, wavy, dotted, dashed, double)
+
+
+css 3 
+- text shadow
+- box shadow
+- borders
+- column output 
+
+
+- transforms
+- transitions
+- animations
+
+borders -> apply for an html element
+
+
+text shadow -> mirror type of reflection of the text
+box shadow -> it will create a mirror reflection of the border
+column output -> we are displaying a html content as multiple column output
+
+
