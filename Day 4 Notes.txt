@@ -1,0 +1,78 @@
+css 3 new features
+
+transition
+
+it will allow to change the property value smoothly over a given period of time
+
+transition
+ transition-delay
+ transition-duration
+ transition-property
+ transition-timing-function
+
+eg:
+div{
+background-color:red;
+width:100px;
+height:200px:
+transition:width 2s,height 4s;
+}  
+
+div:hover
+{
+width+=250px;
+height+=300px;
+}
+
+transformation
+
+css transforms allows us to move, rotate, scale and skew any html elements
+
+transform: 
+translate() -> it will move an element from the current position to new position
+translate() -> x axis,y axis
+translate(50px, 100px)
+rotate() -> it will rotate an  html element by specifying a degree
+rotate(90deg)
+rotate(-20deg)
+rotate can be in clock wise and anti clockwise direction
++deg value -> clockwise direction
+-deg value -> anticlockwise direction
+
+
+skew()-> will rotate based on Xaxis and y axis
+skewX()-> rotate based on X Axis
+SkewY()->Rotate based on Y Axis
+Skew(20deg,30deg)-> 
+
+
+
+scale()-> increase or decrease the element's width and height
+scaleX () -> increase/decrease the width
+scaleY()-> increase/decrease the height
+scale(0.5,0.5)->reduce the original height and width by 50%
+scaleX(10)->replace the original width to 10px width
+
+
+animation :
+Animation lets an element gradually change from one style to another style
+
+the animation style is defined inside @keyframes
+@keyframes will define how the current style should change to new style over a given period of time
+@keyframes mystyle
+{
+0% {background-color:red;}
+20%
+40%
+60%
+80%
+100%
+}
+the name of the @keyframes will be the name of the animation
+to refer the keyframes style for a html element
+body{
+animation-name:mystyle
+animation-duration:4s;
+animation-repeat:forever;
+}
+
