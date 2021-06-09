@@ -1,0 +1,277 @@
+main()
+{
+File *fout;
+int age;
+printf("Enter Age");
+scanf("%d",&age);
+fout.write("Test.txt",age);
+printf("%d",age);
+}
+
+22->input
+22 ->output
+Different ways to store data
+1.file system
+file is defined as a physical entity on the local harddisk of a computer to store data
+storing data to file, it can read all the contents from beginning to end or it has to read from start position to end position
+
+sequential access file
+random access file
+
+i want age > 25 && age < 50 to be retreived?
+can we retrieve specific data like this in file system
+we cannot filter and retreive data in a file
+
+
+
+2.Network model
+multiple computer connected in a n/w was storing data from an application
+As the application module increases and many computers are used to store data, then data storage becomes unorganized and data retreival becomes complex
+
+
+3. DBMS -> Database management system
+the data was stored in the form of tables
+tables had columns(define what type of data it should contain)
+and rows(data)
+FOXPRO, FOxbase , dbase
+1985 to 1994 
+it could not create relationship between tables
+there was data redundancy
+
+Course -> cid   cname
+           100   Btech
+           200   MCA
+           300   MBA
+           400 Others
+Student -> rollno  name cid
+            1       Amit 100
+            2       Arun 999
+
+   
+ RDBMS -> relational database management system
+the table maintained relationship as primary key, foreign key constraint
+Oracle
+MySql
+Sql Server
+MS Access
+PostgreSQL
+there are called as RDBMS Application S/w
+rdbms application uses a common language called SQL (structured query language)
+
+NO SQL DBMS applications like Bigdata, mongodb, cosmosdb
+where data is stored in JSON format
+
+
+SQL is a common query language used by all the RDBMS Application s/w   
+if u known to create query in any one application(sqlserver) , working with oracle , mysql etc will be 95% similar.
+Only few changes will be in datatypes
+SQL -> divides the querying into 5 sections called
+DDL (Data Definition Language) -> creating a new entity in the DB
+create, alter, drop 
+DML (Data Manipulation Language)-> change the data
+insert -> new data
+update-> modifying the existing data
+delete -> remove the data
+truncate->remove the data
+DQL (DAta Query Language)
+select -> retrieve the data
+TCL (Transaction Control Language)
+->permission to retreive data or manipulate the data
+grant-> give permissions
+revoke-> remove the permissions
+DCL (Data Control Language)
+it is used to save changes of data to the db
+save changes -> commit
+undo save changes -> rollback
+
+features of Sql Server
+sql server is a product of Microsoft
+it supports query based and wizard based query execution
+
+sql server comes with 2 types of authentication
+windows authentication-> it will take the login credentials of the windows os to authenticate to sql server
+sql server authentication->mixed mode authentication
+username ->sa
+password -> at the time of installation
+using sa/password -> it would connect to sql server
+
+it supports 4 system databases
+master -> this db is responsible for starting sql server
+
+
+model-> it will give a common menus for all database that is created in SQL Server
+
+
+
+msdb -> this is used to keep track of job scheduling
+schedule some work which has to be done automatically
+sql server agent in sql server which is licensed with Sql server developer, standard or enterprise edition
+this will allow the jobs to be scheduled
+
+
+tempdb-> is used for storing temporary tables
+the content of tempdb will get deleted for every instance of sql server we are connecting
+
+developers can create own database as per project settings
+
+sql server datatypes
+
+tinyint -> byte ->0 to 255
+smallint -> short 
+int -> int
+bigint -> long-> credit card number, debit card number , mobno. aadhar no
+double->floating numbers double(9,2) -> 7 will be real part, 2 is for decimal part
+eg: 2345670.09
+
+money->decimal-> accurate decimal values
+eg: 34349.5345534543
+
+char 
+varchar
+nvarchar
+
+they can store a single character or bunch of characters
+gender char(10)
+male****** -> occupy 10 bytes for each data of gender 
+female****-> space will be 10 
+m*********-> space occupied will be 10
+f*********->space occupied will be 10
+
+gender varchar(10)
+
+male -4 character space will be allocated
+female -> 6 character space
+m->1 character space
+f -> 1 character space
+variant character
+
+gender nvarchar(10)
+nvarchar -> will store even unicode format
+features of varchar w.r.t the memory size it occupy plus apart from english it can store data in many language also
+
+text-> pdf , resume.docx 
+
+ntext -> but it supports unicode format
+
+varbinary -> it will store binary data like mp3, mp4 ,images
+
+datetime -> date and time values
+timespan -> store time value
+bit  -> boolean value true/false
+true -> 0
+false -> 1
+
+
+DDL 
+Constraints
+DML
+
+
+To work on SQL Server -> database engine
+IDE to write and execute the queries -> Management studio
+
+what are the things we can create in a DB
+1. Database -> will store DB entity like tables, views, stored procedure, function, triggers , index
+
+2. table -> represent the data as columns and rows
+
+3. view -> picking specific columns from multiple tables and managing everything as a single content is called view
+
+ 4.stored procedure, function, triggers -> t- sql programming
+
+5. index -> it will sort data and allows us to retrieve data faster
+
+
+any thing created in sql server will automatically start with dbo
+dbo -> database object
+dbo.EMP
+
+sql server is not case senstive
+we can refer the table name in upper case, lower or mixed case
+oracle requires ; after every query
+sql server does not require ;
+
+
+-constraints in sql server
+it will impose rules as how the data in the rows should be defined
+
+--null
+enter data or it can be null
+if no data is entered in a db table it will not consider as 0 instead it will consider as null
+0 != null
+null is a special type in database which means nothing
+if no constraint is specified for a column then default is null
+
+--not null 
+not null-> data has to be entered
+
+ --primary key
+unique value + not null
+unique means the data should not be repeated
+
+  --identity
+auto generate numbers in sql server
+identity can be applied for columns having numerical datatype
+1 table can contain only one column as identity column
+identity +primary key can be given together for a column
+identity(identity seed, identity increment)
+identity(1,1) -> start with 1 and increment by 1
+identity(100,100)->100,200,300.............
+identity(10,10)->10,20,30..............
+
+--default
+we assign a value during table creation
+if no data is entered for that column it will consider the default value
+
+ --unique
+
+unique is similar to primary key.
+It will not allow duplicate values
+unique + null
+
+little difference between oracle and sql server
+in sql server null can be given only once
+if we give null again it will consider as duplicate value and it will not accept
+In oracle for unique constraint we can give null values multiple times
+
+ --check -> check will validate the data entered
+validate range of numerical values,
+range of date time values
+list of varchar data
+age int check(age between 18 AND 60)
+doj date check(doj between '09/06/2021' and '12/12/2021')
+dept varchar(30) check(dept in('IT','Accounts','HR','Admin'))
+
+--foreign key
+it is used to create reference/relationship between 2 tables
+Primary key column of TableA will be made as Foreign Key column in TableB
+
+
+DML
+
+Data Manipulation Language
+
+Insert 
+3 ways to insert data
+1. insert data for all columns as per the sequence of columns created in the table
+2. insert data only for not null columns
+3. insert null values for null columns
+
+
+
+
+
+Update
+
+
+Delete
+
+
+
+
+
+
+
+
+
+
