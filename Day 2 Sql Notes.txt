@@ -1,0 +1,53 @@
+DQL -> Data Query Language
+it has one query command Select
+many clauses (filters used to retrieve the data)
+where
+in
+not in 
+between
+not between
+
+--pattern matching operator
+--like and not like
+--a% -> any name starting with a
+--%s -> any name ending with s
+--a%s->starting with a, can have any characters in between and end with s
+-- _a% ->it can start with any character, 2nd character should be a 
+--and followed by any characters
+-- _ _ _ _ one underscore is for 1 space. 4 underscore means any 4 letter word
+
+
+
+order by
+asc -> default is ascending
+desc
+
+aggr functions
+group by
+having
+
+
+joins
+--joins are of 2 types
+-- equi join or inner join
+-- outer join
+    --left outer join
+	--right outer join
+	--full outer join
+
+
+   EMP            DEPT
+
+left outer join -> it will consider all rows of data from the left table(1st table will be the left table, 2nd table in the query will be right table). if there is no matching data for it in the right table it will show o/p as NULL
+
+
+
+right outer join->it will consider all rows of data from the right table(dept).if there is no matching data for it in the left table(emp) it will show o/p as NULL
+ 
+
+full outer join-> it will consider all rows of data from both left and right table(emp, dept)
+
+
+
+
+
